@@ -1,73 +1,141 @@
-{"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-         "context": [""]
-        },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-         "context": [""]
-        },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure"],
-         "context": [""]
-        },
-        {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-         "context": [""]
-        },
-        {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
-         "context": [""]
-        },
-        {"tag": "adverse_drug",
-         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-         "responses": ["Navigating to Adverse drug reaction module"],
-         "context": [""]
-        },
-        {"tag": "blood_pressure",
-         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
-         "responses": ["Navigating to Blood Pressure module"],
-         "context": [""]
-        },
-        {"tag": "blood_pressure_search",
-         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
-         "responses": ["Please provide Patient ID", "Patient ID?"],
-         "context": ["search_blood_pressure_by_patient_id"]
-        },
-        {"tag": "search_blood_pressure_by_patient_id",
-         "patterns": [],
-         "responses": ["Loading Blood pressure result for Patient"],
-         "context": [""]
-        },
-        {"tag": "pharmacy_search",
-         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
-         "responses": ["Please provide pharmacy name"],
-         "context": ["search_pharmacy_by_name"]
-        },
-        {"tag": "search_pharmacy_by_name",
-         "patterns": [],
-         "responses": ["Loading pharmacy details"],
-         "context": [""]
-        },
-        {"tag": "hospital_search",
-         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-         "responses": ["Please provide hospital name or location"],
-         "context": ["search_hospital_by_params"]
-        },
-        {"tag": "search_hospital_by_params",
-         "patterns": [],
-         "responses": ["Please provide hospital type"],
-         "context": ["search_hospital_by_type"]
-        },
-        {"tag": "search_hospital_by_type",
-         "patterns": [],
-         "responses": ["Loading hospital details"],
-         "context": [""]
-        }
-   ]
+{
+        "intents": [
+          {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": [
+              "Sorry, can't understand you",
+              "Please give me more info",
+              "Not sure I understand"
+            ],
+            "context": [
+              ""
+            ]
+          },
+          {
+            "tag": "greeting",
+            "patterns": [
+              "Hey there",
+              "Hola",
+              "Hello",
+              "Hi"
+            ],
+            "responses": [
+              "Hi there, how can I help?"
+            ],
+            "context": [
+              ""
+            ]
+          },
+          {
+            "tag": "goodbye",
+            "patterns": [
+              "Bye",
+              "See you later",
+              "Goodbye",
+              "Nice chatting to you, bye"
+            ],
+            "responses": [
+              "Bye! Come back again soon."
+            ],
+            "context": [
+              ""
+            ]
+          },
+          {
+            "tag": "thanks",
+            "patterns": [
+              "Thanks",
+              "Thank you",
+              "That's helpful",
+              "Awesome, thanks",
+              "Thanks for helping me"
+            ],
+            "responses": [
+              "Any time!, at your service."
+            ],
+            "context": [
+              ""
+            ]
+          },
+          {"tag": "keto diet",
+"patterns": [" Keto diet?", " mean by keto diet", "keto diet"],
+"responses": ["The low-carb, high-fat diet, topped the list of most searched health-related questions on Google this year. In Keto diet, carbohydrate intake is reduced and it is replaced with fats. The reduction on carbs puts the body in a metabolic state called Ketosis, in which body burns fat for energy. This diet has been proven very beneficial in weight loss and has numerous other health benefits. Apart from this, Keto diet also improves your skin and helps with the polycystic ovarian syndrome (PCOS)."],
+"context": [""]
+},
+{"tag": "ALS disease",
+"patterns": [" ALS disease?", " mean by ALS disease?", "ALS", "ALS disease"],
+"responses": ["Amyotrophic lateral sclerosis or ALS is the second most searched health related question on Google. The disease possibly generated curiosity among people after the death of physicist Stephen Hawking in March. This nervous system disease attacks nerve cells in your brain and spinal cord, which is responsible for controlling voluntary muscle movement. Hawking was diagnosed with this condition when he was 21, but he lived with it for more than 50 years, which is a very long time for a person suffering from this condition."],
+"context": [""]
+},
+{"tag": "endometriosis",
+"patterns": [" endometriosis?", " mean by endometriosis?", "Endometriosis"],
+"responses": [" In this condition, the tissues normally lining the uterus from inside grows outside it. It can be painful and can even lead to infertility. It mostly involves ovaries, fallopian tubes and the tissue lining the pelvis. Recently Hollywood actors like Gabrielle Union, Lena Dunham, and Halsey revealed how this disease impacted their fertility."],
+"context": [""]
+},
+{"tag": "flu",
+"patterns": [" does the flu last?", "flu", " long does flu symptoms last?"],
+"responses": ["This is a common type of disease that affects several people every year. So, to see this question at number five is not surprising. It is quite difficult to specify the time for this disease. There are several factors which affect the recovery process like a person’s immune system and its severity. "],
+"context": [""]
+},
+{"tag": "flu1",
+"patterns": [" long is the flu contagious?","flu contagious"],
+"responses": ["Flu is not only the most common disease, but it is also even contagious of all. Studies say that if a person has flu, they are contagious for about a week after falling sick. Also one falls sick two to four days after being infected. You can go for a flu shot to protect yourself from this."],
+"context": [""]
+},
+{"tag": "implantation",
+"patterns": [" implantation bleeding occur?", "implantation bleeding"],
+"responses": ["According to a report in CNN, implantation bleeding is the seventh most searched question. Implantation bleeding generally occurs in early pregnancy, mostly between 6 and 12 days after conception. It happens when the fertilised egg attaches to the lining of the uterus and is often mistaken as a regular period cycle as it looks similar. It is generally light and short and happens for a few days."],
+"context": [""]
+},
+{"tag": "Tired",
+"patterns": [" always tired?","tired","tiredness"],
+"responses": ["This is again one of the most common conditions of adults and so is the eighth most Googled health condition. Interestingly it has its own acronym, TATT- Tired all the time. If you always feel sluggish and sleepy, then you must be a victim of thiondition. Honestly, there is no common cause of this condition. It can be due to several reasons, so it is better to consult your doctor if you feel extremely exhausted all the time."],
+"context": [""]
+},
+{"tag": "heartburn",
+"patterns": [" heartburn feel like?", " mean by heartburn?", "heartburn"],
+"responses": ["The burning sensation in the middle of the chest, near the heart, is called as heartburn, which is the ninth most searched question. It is nowhere related to heart but is rather a condition of stomach and esophagus. It occurs when the stomach acid flows back into the esophagus and leads to a burning sensation."],
+"context": [""]
+},
+{"tag": "high bp",
+"patterns": [" high blood pressure?","high blood pressure","blood pressure"],
+"responses": ["High blood pressure or hypertension, which is at number ten is also a common condition. This condition occurs when the blood pressure increases. The long-term force of blood against the artery wall can even cause heart diseases."],
+"context": [""]
+},
+{"tag": "RSV",
+"patterns": ["RSV?"," mean by RSV?","RSV"],
+"responses": ["Respiratory syncytial virus (RSV) is a common respiratory virus that results in cold-like symptoms such as a runny nose, coughing, sneezing, and wheezing, according to the CDC. It is spread through respiratory droplets or via direct contact with contaminated surfaces or people."],
+"context": [""]
+},
+{"tag": "Calories",
+"patterns": [" many calories should I eat?"," many calories should a person consume on a daily basis?","calories"],
+"responses": ["The number of calories a person should consume varies a lot depending on height, weight, age, sex, and physical activity level. However, on average, a moderately active woman between 26 and 50 should eat about 2,000 calories a day according to the 2015-2020 Dietary Guidelines developed by the US Department of Health and Human Services. (For a more accurate estimate, check out the USDA's MyPlate Plan."],
+"context": [""]
+},
+{"tag": "low bp",
+"patterns": ["lower blood pressure immediately?"," lower blood pressure at home?", "lower blood pressure"],
+"responses": ["If your blood pressure is elevated and you want to see an immediate change, lie down and take deep breaths. This is how you lower your blood pressure within minutes, helping to slow your heart rate and decrease your blood pressure. When you feel stress, hormones are released that constrict your blood vessels."],
+"context": [""]
+},
+{"tag": "Kidney stones",
+"patterns": [" causes kidney stones?","the causes of kidney stone?", "kidney stone"],
+"responses": ["Kidney stones form when your urine contains more crystal-forming substances  such as calcium, oxalate and uric acid  than the fluid in your urine can dilute. At the same time, your urine may lack substances that prevent crystals from sticking together, creating an ideal environment for kidney stones to form."],
+"context": [""]
+},
+{"tag": "Constipation",
+"patterns": [" relieve constipation?","constipation"],
+"responses": ["Drinking more water,avoiding caffine and alcohol as both are dehydrating. Eating more high fibre foods like oatmeal, prunes and popcorn. Taking over the counter laxatives."],
+"context": [""]
+},
+{"tag": "Hiccups",
+"patterns": [" get rid of hiccups?","Remedy for hiccups?","hiccups"],
+"responses": ["Taking deep, slow breaths, Drinking water, Holding your breath for 5-10 seconds, Blowing up a balloon."],
+"context": [""]
 }
+          
+          
+        ]
+      }
+
+      
